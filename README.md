@@ -6,12 +6,15 @@ This bot allows you to configure and automate a single Twitter account.
 ## Dependencies
 
 Apache-ant
+
 JDK
 
 ## Usage
 
 ant clean
+
 ant dist
+
 ant run
 
 ## Contributing
