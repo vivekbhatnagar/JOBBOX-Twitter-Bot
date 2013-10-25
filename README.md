@@ -2,7 +2,6 @@
 
 This bot allows you to configure and automate a single Twitter account.
 
-
 ## Dependencies
 
 Apache-ant
@@ -27,8 +26,8 @@ ant run
 
 ## License
 
-The following is copyright JOBBOX. You may not reuse anything therein without permission:
+The following is JOBBOX copyright. You may not reuse without permission:
 
 + BotConfig method on src/BotConfig.java
 
-All other directories and files are MIT Licensed. Feel free to use the HTML and CSS as you please.
+Everything else is MIT Licensed, feel free to contribute!
