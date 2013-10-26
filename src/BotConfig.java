@@ -1,4 +1,4 @@
-package MWTweetBot;
+package TweetBot;
 
 import java.io.BufferedReader;
 import java.io.IOException;

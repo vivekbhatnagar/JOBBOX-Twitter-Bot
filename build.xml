@@ -1,6 +1,6 @@
-<project name="JobboxBot" default="dist" basedir=".">
+<project name="TweetBot" default="dist" basedir=".">
     <description>
-       Jobbox build file
+       Tweet build file
     </description>
   <!-- set global properties for this build -->
   <property name="src" location="src"/>
@@ -33,12 +33,12 @@
 			<include name="*.jar"/>
 		</fileset>
 	</path>
-	<manifestclasspath property="lib.list" jarfile="${bin}/JobboxBot.jar">
+	<manifestclasspath property="lib.list" jarfile="${bin}/TweetBot.jar">
 		<classpath refid="build-classpath"/>
 	</manifestclasspath>
-	<jar jarfile="${bin}/JobboxBot.jar" basedir="${build}">
+	<jar jarfile="${bin}/TweetBot.jar" basedir="${build}">
 		<manifest>
-			<attribute name="Main-Class" value="MWTweetBot.Main"/>
+			<attribute name="Main-Class" value="TweetBot.Main"/>
 			<attribute name="Class-Path" value="${lib.list}"/>
 		</manifest>
 	</jar>
@@ -50,7 +50,7 @@
   
   <target name="run" depends="dist">
         <java 
-		jar="${bin}/JobboxBot.jar" 
+		jar="${bin}/TweetBot.jar" 
 		fork="true"		
 		/>
   </target>	

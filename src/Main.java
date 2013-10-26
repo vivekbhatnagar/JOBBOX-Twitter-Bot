@@ -1,4 +1,4 @@
-package MWTweetBot;
+package TweetBot;
 import java.util.ArrayList;
 import twitter4j.FilterQuery;
 import twitter4j.StatusListener;
@@ -7,7 +7,7 @@ import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import twitter4j.conf.*;
 
-import MWTweetBot.Stream.Listener;
+import TweetBot.Stream.Listener;
 
 
 

@@ -1,6 +1,6 @@
-package MWTweetBot.Stream;
+package TweetBot.Stream;
 
-import MWTweetBot.BotConfig;
+import TweetBot.BotConfig;
 import java.util.List;
 import twitter4j.StallWarning;
 import twitter4j.Status;

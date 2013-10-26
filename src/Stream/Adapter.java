@@ -1,6 +1,6 @@
-package MWTweetBot.Stream;
+package TweetBot.Stream;
 
-import MWTweetBot.BotConfig;
+import TweetBot.BotConfig;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
