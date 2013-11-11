@@ -21,7 +21,7 @@ public class Listener implements StatusListener {
     private Adapter _adapter;
 
     public Listener() {
-        _twitter = new TwitterFactory(BotConfig.getInstance().getTwitterConfig()).getInstance();
+        _twitter = BotConfig.getInstance().getTwitter();
         _adapter = new Adapter();
         _last_fav = 0;
         //_twitter.verifyCredentials()
@@ -44,7 +44,7 @@ public class Listener implements StatusListener {
 
     @Override
     public void onStatus(Status status) {        
-        Adapter.Input(status);        
+        _adapter.input(status);        
     }
 
     @Override

@@ -28,6 +28,7 @@ public class BotConfig {
         return _singleton;
     }    
     
+	private Twitter _twitter;
     private Configuration _twitter_conf;
     private String[] _tweet_filter;
     private String[] _tweet_filter_K1;
@@ -50,6 +51,7 @@ public class BotConfig {
 		   .setOAuthAccessTokenSecret("FMVySYE0djbep4s9IDGC29EfzvtmPgEutssWg20NU");
                  
         _twitter_conf = cb.build();
+		_twitter = new TwitterFactory(_twitter_conf).getInstance();
         
         InitTweetFilter();
         InitTweetTrack();
@@ -147,6 +149,7 @@ public class BotConfig {
         _status_updates = statusUpdates.toArray(new String[statusUpdates.size()]);
     }
     
+	public Twitter getTwitter(){return _twitter;}
     public Configuration getTwitterConfig(){return _twitter_conf;}
     public String[] getTweetFilter(){return _tweet_filter_K1;}        
     public String[] getTweetFilterK1(){return _tweet_filter_K1;}    
