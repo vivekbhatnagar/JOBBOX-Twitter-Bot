@@ -36,28 +36,43 @@ public class BotConfig {
     private long[] _tweet_track;
     private String[] _status_updates;
     private static final String STR_TWEET_FILTER_SEPATOR = "###";    
+	private static final String PATH_OAUTH = "./config/oauth";
     private static final String PATH_TWEET_FILTER = "./config/tweet_filter";
     private static final String PATH_TWEET_TRACK = "./config/tweet_track";    
     private static final String PATH_STATUS_UPDATES = "./config/status_update";    
     
 
-    private BotConfig() {
-        
-        ConfigurationBuilder cb = new ConfigurationBuilder();
-		 cb.setDebugEnabled(true)
-		   .setOAuthConsumerKey("bpMa90u6stnzUW63usAyA")
-		   .setOAuthConsumerSecret("wthWpiJK8uQZS913CVLEQWhvehoxgfVFb8OyET0JZpk")
-		   .setOAuthAccessToken("1555969092-QQI884SbIQ38Bf6QUKouVkWFKzhp9RakcMeYd03")
-		   .setOAuthAccessTokenSecret("FMVySYE0djbep4s9IDGC29EfzvtmPgEutssWg20NU");
-                 
-        _twitter_conf = cb.build();
-		_twitter = new TwitterFactory(_twitter_conf).getInstance();
-        
+    private BotConfig() {        
+		InitTwitter();
         InitTweetFilter();
         InitTweetTrack();
         InitStatusUpdate();
     }
+	
+	
+	private void InitTwitter() {
+        Path file = Paths.get(PATH_OAUTH);
+        try {
+            InputStream in = Files.newInputStream(file);
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(in));
+					
+			ConfigurationBuilder cb = new ConfigurationBuilder();
+			 cb.setDebugEnabled(true)
+			   .setOAuthConsumerKey(reader.readLine())
+			   .setOAuthConsumerSecret(reader.readLine())
+			   .setOAuthAccessToken(reader.readLine())
+			   .setOAuthAccessTokenSecret(reader.readLine());
+                 
+			_twitter_conf = cb.build();
+			_twitter = new TwitterFactory(_twitter_conf).getInstance();		
 
+		} catch (IOException x) {
+            System.err.println(x);
+        }
+                
+    }
+	
     private void InitTweetFilter() {
         Path file = Paths.get(PATH_TWEET_FILTER);
         try {
