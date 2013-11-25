@@ -24,10 +24,14 @@ ant run
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-## License
+About
+-----
 
-The following is JOBBOX copyright. You may not reuse without permission:
+JOBBOX Twitter Bot was originally written by [Cristóvão Honorato](https://github.com/BlitzkriegJS) and is maintained by Cristóvão Honorato and [JOBBOX](http://jobbox.io)
 
-+ BotConfig method on src/BotConfig.java
+![JOBBOX](http://blog.jobbox.io/assets/themes/jobbox/img/jobbox-logo.png).
 
-Everything else is MIT Licensed, feel free to contribute!
+License
+-------
+
+Conundrum is Copyright (c) 2013 JOBBOX. Released under the [MIT License](http://www.opensource.org/licenses/MIT).
