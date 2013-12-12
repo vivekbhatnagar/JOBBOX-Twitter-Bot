@@ -27,7 +27,7 @@ ant run
 About
 -----
 
-JOBBOX Twitter Bot was originally written by [Cristóvão Honorato](https://github.com/BlitzkriegJS) and is maintained by Cristóvão Honorato and [JOBBOX](http://jobbox.io)
+JOBBOX Twitter Bot was originally written by [Cristóvão Honorato](https://github.com/BlitzkriegJS) and is maintained by Cristóvão Honorato and [JOBBOX](http://jobbox.io).
 
 <img src="https://dl.dropboxusercontent.com/u/17994193/logo/logo_horizontal.png" width="250" height="100">
 
