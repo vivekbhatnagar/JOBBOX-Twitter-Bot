@@ -23,7 +23,7 @@
 		includeantruntime="false"
 		srcdir="${src}" 
 		destdir="${build}"
-		classpath="${lib}/twitter4j-core-3.0.3.jar:${lib}/twitter4j-stream-3.0.3.jar"
+		classpath="${lib}/twitter4j-core-3.0.5.jar:${lib}/twitter4j-stream-3.0.5.jar"
 		/>		
   </target>
 
